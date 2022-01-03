@@ -9,7 +9,7 @@ const {
 const { dashboardView } = require("../controllers/dashboardController");
 const { protectRoute } = require("../auth/protect");
 
-const { test} = require("../controllers/testController")
+const { test } = require("../controllers/testController")
 
 const router = express.Router();
 
@@ -18,7 +18,6 @@ router.get("/login", loginView);
 //Dashboard
 router.get("/dashboard", protectRoute, dashboardView);
 router.get("/", protectRoute, dashboardView);
-router.get("/tt", test);
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);

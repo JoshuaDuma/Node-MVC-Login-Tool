@@ -34,6 +34,7 @@ const loginCheck = passport => {
   );
 
   passport.serializeUser((user, done) => {
+    console.log("USER ID IS: " + user.id)
     done(null, user.id);
   });
 
@@ -44,6 +45,13 @@ const loginCheck = passport => {
   });
 };
 
+const Passport = require("../models/Passport");
+
+const storeSession = session => new Passport({
+    id
+  });
+
 module.exports = {
   loginCheck,
+  storeSession
 };
