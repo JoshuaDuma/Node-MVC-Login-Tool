@@ -83,9 +83,16 @@ const loginUser = (req, res) => {
   }
 };
 
+// For View
+const logoutView = (req, res) => {
+  req.session.destroy();
+  res.render("login", {});
+};
+
 module.exports = {
   registerView,
   loginView,
   registerUser,
   loginUser,
+  logoutView,
 };

@@ -5,6 +5,7 @@ const {
   loginView,
   registerUser,
   loginUser,
+  logoutView,
 } = require("../controllers/loginController");
 const { dashboardView } = require("../controllers/dashboardController");
 const { protectRoute } = require("../auth/protect");
@@ -15,6 +16,7 @@ const router = express.Router();
 
 router.get("/register", registerView);
 router.get("/login", loginView);
+router.get("/logout", logoutView);
 //Dashboard
 router.get("/dashboard", protectRoute, dashboardView);
 router.get("/", protectRoute, dashboardView);

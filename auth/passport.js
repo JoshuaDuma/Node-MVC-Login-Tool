@@ -45,13 +45,6 @@ const loginCheck = passport => {
   });
 };
 
-const Passport = require("../models/Passport");
-
-const storeSession = session => new Passport({
-    id
-  });
-
 module.exports = {
-  loginCheck,
-  storeSession
+  loginCheck
 };
