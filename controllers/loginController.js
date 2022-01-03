@@ -65,17 +65,7 @@ const loginView = (req, res) => {
 
 const loginUser = (req, res) => {
   console.log(req.body)
-  try{
   const { email, password } = req.body;
-  }
-catch{
-  console.log("Please fill in all the fields");
-  res.render("login", {
-    email: "Ok@gmail.com",
-    password:"test"
-  });
-  return
-}
 
   //Required
   if (!email || !password) {

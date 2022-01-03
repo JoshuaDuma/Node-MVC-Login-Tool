@@ -1,3 +1,7 @@
-const testView = (req, res) => {
-  res.send('random.text')
+const test = (req, res) => {
+  res.render("test");
+  };
+  
+  module.exports = {
+    test
   };

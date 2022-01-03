@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const dotenv = require("dotenv");
+app.use(express.urlencoded({extended: false}));
 dotenv.config();
 
 const database = process.env.MONGOLAB_URI;
